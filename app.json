@@ -1,0 +1,53 @@
+{
+    "name": "test -",
+    "description": "--",
+    "repository": "https://github.com/Pridmy/test",
+    "stack": "container",
+    "keywords": [
+      "telegram",
+      "voicechat",
+      "bot",
+      "video",
+      "player",
+      "python",
+      "pyrogram",
+      "pytgcalls",
+      "videoplayer"
+    ],
+    "env": {
+      "API_ID": {
+        "description": "User Account Telegram API_ID get it from my.telegram.org/apps",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "User Account Telegram API_HASH get it from my.telegram.org/apps",
+        "required": true
+      },
+      "SESSION_STRING": {
+        "description": "Pyrogram Session String of User Account, get it from @genStr_robot",
+        "required": true
+      },
+      "CHAT_ID": {
+        "description": "ID of your Channel or Group where the bot will works or stream videos (for multiple chats seperated by space)",
+        "required": true
+      },
+      "INPUT": {
+        "description": "INPUT SOURCE",
+        "required": true
+      }
+    },
+    "formation": {
+      "worker": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
+    "buildpacks": [
+      {
+        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+      },
+      {
+        "url": "heroku/python"
+      }
+    ]
+  }
