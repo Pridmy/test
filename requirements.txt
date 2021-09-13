@@ -1,5 +1,6 @@
 tgcrypto
 requests
+asyncio
 youtube_dl
 ffmpeg-python
 python-dotenv
