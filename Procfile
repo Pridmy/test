@@ -1,2 +1,2 @@
 
-worker: bash start.sh
+worker: python3 S.py
