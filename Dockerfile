@@ -1,17 +1,13 @@
-# Python Based Docker
 FROM python:latest
 
-# Installing Packages
 RUN apt update && apt upgrade -y
-RUN apt install git curl python3-pip ffmpeg -y
+RUN apt install python3-pip -y
+RUN apt install ffmpeg -y
 
-# Updating Pip Packages
-RUN pip3 install -U pip
+COPY . /pridmy
+WORKDIR /pridmy
 
-# Copying Requirements
-
-# Installing Requirements
+RUN pip3 install --upgrade pip
 RUN pip3 install -U -r requirements.txt
 
-# Running Video Player Bot
-CMD ["/bin/bash", "start.sh"]
+CMD python3 S.py
